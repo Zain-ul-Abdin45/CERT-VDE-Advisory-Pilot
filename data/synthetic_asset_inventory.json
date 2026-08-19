@@ -1,0 +1,125 @@
+{
+  "_readme": "30+ synthetic operator-inventory entries, deliberately messy per Phase 3 of SRAG Preparation Roadmap.md (abbreviated names, typos, internal part numbers instead of marketing names). Built from real vendor/product/version/part-number data in the 18 collected CERT@VDE advisories, not invented from scratch -- ground_truth.should_match and .is_affected are known because each entry was constructed FROM a specific real advisory entry, not guessed. 'near_miss' entries are deliberately similar-but-wrong (per the debrief's SIMATIC Controller X vs XT false-positive concern), 'true_negative' entries are real, plausible industrial products that do not appear in this corpus at all.",
+  "assets": [
+    {
+      "asset_id": "A001", "location": "Line 2, Cabinet B",
+      "vendor": "ifm electronic", "product": "CR3171", "version": "3.1", "part_no": null,
+      "ground_truth": {"kind": "true_positive_affected", "advisory_id": "VDE-2026-005", "product_id": "CSAFPID-0003", "should_match": true, "is_affected": true}
+    },
+    {
+      "asset_id": "A002", "location": "Line 2, Cabinet C",
+      "vendor": "IFM", "product": "CR-3171", "version": "3.3", "part_no": null,
+      "ground_truth": {"kind": "true_positive_patched", "advisory_id": "VDE-2026-005", "product_id": "CSAFPID-0002", "should_match": true, "is_affected": false}
+    },
+    {
+      "asset_id": "A003", "location": "Building 4, Rack 1",
+      "vendor": "Weidmuller", "product": "Procon-Web SCADA", "version": "6.11.0", "part_no": "3174050000",
+      "ground_truth": {"kind": "true_positive_affected", "advisory_id": "VDE-2026-085", "product_id": "CSAFPID-51001", "should_match": true, "is_affected": true}
+    },
+    {
+      "asset_id": "A004", "location": "Building 4, Rack 2",
+      "vendor": "Weidmueller Interface", "product": "PROCON WEB SCADA", "version": "6.11.3", "part_no": null,
+      "ground_truth": {"kind": "true_positive_patched", "advisory_id": "VDE-2026-085", "product_id": "CSAFPID-52001", "should_match": true, "is_affected": false}
+    },
+    {
+      "asset_id": "A005", "location": "Utility Room A",
+      "vendor": "JUMO", "product": "VariTron-300", "version": "425.0.0.0.5", "part_no": null,
+      "ground_truth": {"kind": "true_positive_affected", "advisory_id": "VDE-2026-009", "product_id": null, "should_match": true, "is_affected": true}
+    },
+    {
+      "asset_id": "A006", "location": "Utility Room A",
+      "vendor": "Jumo GmbH & Co", "product": "variTRON 300", "version": "431.10.0.0.26", "part_no": null,
+      "ground_truth": {"kind": "boundary_patched", "advisory_id": "VDE-2026-009", "product_id": null, "should_match": true, "is_affected": false, "note": "range is strict '<431.10.0.0.26' -- exact boundary version must NOT be flagged affected"}
+    },
+    {
+      "asset_id": "A007", "location": "Safety Cabinet 1",
+      "vendor": "Pilz", "product": "PASvisu", "version": "1.15.0", "part_no": null,
+      "ground_truth": {"kind": "true_positive_affected", "advisory_id": "PPSA-2026-002", "product_id": null, "should_match": true, "is_affected": true}
+    },
+    {
+      "asset_id": "A008", "location": "Safety Cabinet 1",
+      "vendor": "Pilz GmbH & Co. KG", "product": "7-inch operator panel", "version": null, "part_no": "266704",
+      "ground_truth": {"kind": "part_number_only_match", "advisory_id": "PPSA-2026-002", "product_id": null, "should_match": true, "is_affected": null, "note": "name is written nothing like the CSAF product name (PMIv7xxe) -- only the internal part number bridges this; a name-only cascade should fail this and only the part-number stage should catch it"}
+    },
+    {
+      "asset_id": "A009", "location": "Field Bus Panel 3",
+      "vendor": "WAGO GmbH & Co KG", "product": "Field Profinet Firmware", "version": "1.2.0.50", "part_no": null,
+      "ground_truth": {"kind": "true_positive_affected", "advisory_id": "VDE-2026-031", "product_id": null, "should_match": true, "is_affected": true}
+    },
+    {
+      "asset_id": "A010", "location": "Field Bus Panel 3",
+      "vendor": "Wago", "product": "I/O System Field module", "version": null, "part_no": "0765-2102/0100-0000",
+      "ground_truth": {"kind": "true_positive_identity_only", "advisory_id": "VDE-2026-031", "product_id": null, "should_match": true, "is_affected": null}
+    },
+    {
+      "asset_id": "A011", "location": "Network Cabinet 2",
+      "vendor": "Turck", "product": "TBEN-L4-SE-M2 Switch", "version": "2.0.0.0", "part_no": null,
+      "ground_truth": {"kind": "true_positive_affected", "advisory_id": "VDE-2026-038", "product_id": null, "should_match": true, "is_affected": true}
+    },
+    {
+      "asset_id": "A012", "location": "Network Cabinet 2",
+      "vendor": "TURCK GmbH", "product": "TBEN Switch L4", "version": "2.1.2.0", "part_no": null,
+      "ground_truth": {"kind": "true_positive_patched_alias", "advisory_id": "VDE-2026-038", "product_id": null, "should_match": true, "is_affected": false, "note": "token-shuffled abbreviation (TBEN Switch L4 vs Managed Ethernet Switch TBEN-L4-SE-M2) -- good test of token-based fuzzy matching vs plain substring"}
+    },
+    {
+      "asset_id": "A013", "location": "Gateway Room 1",
+      "vendor": "MBS", "product": "UGW-X Single-X Gateway", "version": "V3_00_00", "part_no": null,
+      "ground_truth": {"kind": "true_positive_affected", "advisory_id": "VDE-2026-039", "product_id": null, "should_match": true, "is_affected": true}
+    },
+    {
+      "asset_id": "A014", "location": "PLC Rack 5",
+      "vendor": "CODESYS GmbH", "product": "CODESYS EtherNet/IP", "version": "3.5.0.0", "part_no": null,
+      "ground_truth": {"kind": "true_positive_affected", "advisory_id": "Advisory2026-04_VDE-2026-040", "product_id": null, "should_match": true, "is_affected": true}
+    },
+    {
+      "asset_id": "A015", "location": "Sensor Bay 2",
+      "vendor": "Balluff", "product": "BNI-EGW", "version": "2.0.0", "part_no": "BNI EGW-720-007-K095",
+      "ground_truth": {"kind": "true_positive_affected_abbrev", "advisory_id": "VDE-2026-049", "product_id": null, "should_match": true, "is_affected": true, "note": "product name is abbreviated to the point plain substring match likely fails; part_no should catch what fuzzy name-matching might miss"}
+    },
+    {
+      "asset_id": "A016", "location": "Data Room, iba rack",
+      "vendor": "iba", "product": "ibaPDA", "version": "7.5.0", "part_no": null,
+      "ground_truth": {"kind": "true_positive_affected", "advisory_id": "VDE-2026-051", "product_id": null, "should_match": true, "is_affected": true}
+    },
+    {
+      "asset_id": "A017", "location": "EV Charging Bay 1",
+      "vendor": "Phoenix Contact GmbH", "product": "CHARX SEC 3150", "version": "1.5.0", "part_no": "1138965",
+      "ground_truth": {"kind": "true_positive_affected", "advisory_id": "VDE-2026-060", "product_id": null, "should_match": true, "is_affected": true}
+    },
+    {
+      "asset_id": "A018", "location": "IO Rack 7",
+      "vendor": "Murrelektronik", "product": "MVK-MPNIO DIO16 IRT module", "version": null, "part_no": "55530",
+      "ground_truth": {"kind": "true_positive_identity_only", "advisory_id": "VDE-2026-062", "product_id": null, "should_match": true, "is_affected": null}
+    },
+    {
+      "asset_id": "A019", "location": "Line 1, Cabinet A",
+      "vendor": "Weidmueller", "product": "PROCON-WEB SCADA XT", "version": "1.0.0", "part_no": null,
+      "ground_truth": {"kind": "near_miss_false_positive_trap", "advisory_id": null, "product_id": null, "should_match": false, "is_affected": null, "note": "fictional variant -- fuzzy matching against the real PROCON-WEB SCADA advisory is expected to score this dangerously high; this is the SIMATIC-X-vs-XT false-positive pattern from the debrief, reproduced with real data"}
+    },
+    {
+      "asset_id": "A020", "location": "Gateway Room 2",
+      "vendor": "MBS GmbH", "product": "UGW-Y-Series Gateway", "version": "V2_00_00", "part_no": null,
+      "ground_truth": {"kind": "near_miss_false_positive_trap", "advisory_id": null, "product_id": null, "should_match": false, "is_affected": null, "note": "vendor is a real, correct match but this exact product line (UGW-Y-Series) does not exist in the corpus (only A- and X-Series do) -- vendor-level fuzzy match must not be mistaken for product-level match"}
+    },
+    {"asset_id": "A021", "location": "Line 3, Cabinet A", "vendor": "Siemens", "product": "SIMATIC S7-1500", "version": "2.9.0", "part_no": null, "ground_truth": {"kind": "true_negative", "should_match": false}},
+    {"asset_id": "A022", "location": "Line 3, Cabinet B", "vendor": "Rockwell Automation", "product": "CompactLogix 5380", "version": "33.011", "part_no": null, "ground_truth": {"kind": "true_negative", "should_match": false}},
+    {"asset_id": "A023", "location": "Line 4, Cabinet A", "vendor": "Beckhoff", "product": "CX5140", "version": "TC3.1", "part_no": null, "ground_truth": {"kind": "true_negative", "should_match": false}},
+    {"asset_id": "A024", "location": "Line 4, Cabinet B", "vendor": "Schneider Electric", "product": "Modicon M340", "version": "3.40", "part_no": null, "ground_truth": {"kind": "true_negative", "should_match": false}},
+    {"asset_id": "A025", "location": "Line 5, Cabinet A", "vendor": "ABB", "product": "AC500", "version": "2.9.1", "part_no": null, "ground_truth": {"kind": "true_negative", "should_match": false}},
+    {"asset_id": "A026", "location": "Line 5, Cabinet B", "vendor": "B&R", "product": "X20 CPU", "version": "4.90", "part_no": null, "ground_truth": {"kind": "true_negative", "should_match": false}},
+    {"asset_id": "A027", "location": "Line 6, Cabinet A", "vendor": "Festo", "product": "CPX-E", "version": "1.6.0", "part_no": null, "ground_truth": {"kind": "true_negative", "should_match": false}},
+    {"asset_id": "A028", "location": "Line 6, Cabinet B", "vendor": "Omron", "product": "NX1P2", "version": "1.44", "part_no": null, "ground_truth": {"kind": "true_negative", "should_match": false}},
+    {"asset_id": "A029", "location": "Line 7, Cabinet A", "vendor": "Mitsubishi Electric", "product": "MELSEC iQ-R", "version": "38", "part_no": null, "ground_truth": {"kind": "true_negative", "should_match": false}},
+    {"asset_id": "A030", "location": "Line 7, Cabinet B", "vendor": "Bosch Rexroth", "product": "IndraControl XM", "version": "13", "part_no": null, "ground_truth": {"kind": "true_negative", "should_match": false}},
+    {
+      "asset_id": "A031", "location": "Building 4, Rack 3",
+      "vendor": "Weidmuller GmbH", "product": "PROCON WEB", "version": "6.11.2", "part_no": "3174090000",
+      "ground_truth": {"kind": "boundary_affected", "advisory_id": "VDE-2026-085", "product_id": "CSAFPID-51001", "should_match": true, "is_affected": true, "note": "range is inclusive '<=6.11.2' -- exact boundary version must be flagged affected (opposite boundary sense from A006)"}
+    },
+    {
+      "asset_id": "A032", "location": "PLC Rack 5",
+      "vendor": "Codesys", "product": "EtherNet IP stack", "version": "4.9.0", "part_no": null,
+      "ground_truth": {"kind": "boundary_patched", "advisory_id": "Advisory2026-04_VDE-2026-040", "product_id": null, "should_match": true, "is_affected": false, "note": "range is strict '<4.9.0.0' -- exact boundary version must NOT be flagged affected"}
+    }
+  ]
+}
