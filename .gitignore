@@ -1,5 +1,6 @@
 data/*
 !data/synthetic_asset_inventory.json
+code/qa/embeddings.json
 __pycache__/
 *.pyc
 .venv/

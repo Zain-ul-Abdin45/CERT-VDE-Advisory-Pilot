@@ -1,6 +1,6 @@
 # Status — continuity notes
 
-*Last updated 19 August 2026. Read this first if picking the pilot back up after a gap — it's written
+*Last updated 23 August 2026. Read this first if picking the pilot back up after a gap — it's written
 so the next session doesn't need to re-derive anything from the conversation history.*
 
 Companion docs, outside this repo, in `research paper/inIT/`:
@@ -59,28 +59,48 @@ Companion docs, outside this repo, in `research paper/inIT/`:
      CVE-applicability data in relationship-modeled advisories lives only on the synthetic
      "installed_on" composite entries, not the bare component entries name-matching naturally favors.
 
+5. **Slice B: grounded answering + abstention (23 August).** `code/qa/` — lean scripts, no Postgres, same
+   call as the matching cascade:
+   - `build_chunks.py` — structure-aware chunking, two paths matching the corpus (CSAF doc/vulnerability
+     notes + CVSS scores as their own chunks, kept as structured fields rather than flattened prose; HTML
+     split on `<h2>`/`<h3>` sections). 468 chunks across 18 advisories.
+   - `retrieval.py` — hybrid BM25 (`rank_bm25`) + vector (Ollama `nomic-embed-text`, cached embeddings)
+     with Reciprocal Rank Fusion, ported from the RAG project's pattern (`README_RAG.md`). **The ported
+     abstention threshold (0.7) silently failed on this corpus** — off-topic probes scored 0.56-0.60,
+     comfortably inside it — recalibrated to 0.45 against a measured 6-query probe set
+     (`FAILURE_LOG.md` #4).
+   - `generate_answer.py` — grounded generation via Ollama `llama3.1`, cites `advisory_id / section`,
+     refuses when retrieval abstains or evidence is insufficient.
+   - `run_eval.py` — scores the pipeline against `qa_pairs.json` (11 answerable + 4 deliberately
+     unanswerable hand-written pairs), writes `results_qa.json`.
+   - **Result: retrieval hit rate @5 = 1.000, MRR = 1.000, abstention accuracy = 0.933 (14/15),
+     false-answer rate on unanswerable questions = 0.000, attribution accuracy = 0.909,
+     faithfulness (keyword heuristic) = 0.909.** The one miss is a genuine retrieval-ranking finding, not
+     a bug: boilerplate legal-disclaimer text outranked the actual answer chunk on a vague query
+     (`FAILURE_LOG.md` #5).
+   - `prompt_injection_check.py` — Week 3c. One synthetic instruction-bearing chunk, forced into context;
+     `llama3.1` did not obey it, with or without an explicit anti-injection line in the system prompt.
+     Real but narrow result — one crude injection shape, not a robustness claim (`FAILURE_LOG.md` #6).
+
 ---
 
 ## What's NOT done yet
 
-- **Week 2: the actual ingestion pipeline.** `code/ingestion/csaf/` and `code/ingestion/html/` are still
-  empty scaffolding. The matching cascade above works directly against raw `csaf.json` files — it does
-  not depend on the ingestion pipeline existing, so this can be built in parallel or after without
-  blocking anything already measured.
-- **The structured store** (`advisories`/`cves`/`products`/`assets`/`chunks` tables) — not started. Per
-  the "lean scripts, not a full product" decision (19 August), this may not be needed before the memo at
-  all — the measured numbers above came entirely from flat JSON + Python, no database.
-- **Slice B: grounded answering + abstention.** Not started. Plan is to reuse the RAG project's hybrid
-  BM25+vector search and cosine-threshold abstain pattern (`README_RAG.md` in the inIT folder), pointed
-  at advisory chunks instead of generic PDFs. Needs: chunking the 18 advisories' text, ~10-15 hand-labeled
-  Q&A pairs (scaled down from the roadmap's 20-30 given the compressed timeline), the actual retrieval
-  code.
-- **Prompt-injection sanity check** (Week 3c) — cheap, ~10 minutes, not done yet. Insert one advisory
-  with an instruction-like sentence, see if the system obeys it.
+- **Week 2: the actual ingestion pipeline as a reusable module.** `code/ingestion/csaf/` and
+  `code/ingestion/html/` are still empty scaffolding. Both the matching cascade and Slice B's chunking
+  work directly against raw `csaf.json`/`page.html` files without it, so this is now genuinely optional
+  before the memo — a code-organization cleanup, not a blocking dependency.
+- **The structured store** (`advisories`/`cves`/`products`/`assets`/`chunks` tables) — not started, and
+  per the "lean scripts, not a full product" decision (19 August), not needed before the memo — every
+  measured number so far (matching cascade, Slice B eval) came from flat JSON + Python, no database.
 - **`code/ingestion/pdf/extract_report.py`** — this is the TÜV NORD OCR extractor from an unrelated
   student-job task, sitting in this folder as a reference/placeholder since no real PDF advisories exist
   to build a genuine PDF ingestion path against. Decide before the memo whether to keep it as a "here's
   evidence I can handle messy PDF extraction generally" artifact or remove it as out of scope.
+- **Format comparison (Week 4)** — run the same questions against CSAF vs. HTML-derived chunks and compare
+  accuracy. Slice B's chunk store already tags every chunk with `format`, so this is a filtering exercise
+  over the existing pipeline, not new infrastructure.
+- **The memo itself.** Target: early September 2026.
 
 ---
 
@@ -96,15 +116,21 @@ Companion docs, outside this repo, in `research paper/inIT/`:
   (`re.findall(r"\d+", v)` then tuple comparison) for non-`vers:`-prefixed specs — works for the
   letter-prefixed pseudo-semver formats seen in this corpus (e.g. `V6_00_07`) but hasn't been stress-
   tested beyond what's in the current 18-advisory corpus.
+- `code/qa/embeddings.json` (~7MB, 468 chunks × 768-dim vectors) is gitignored — regenerable in ~10
+  seconds via `python3 retrieval.py` against a running `ollama serve` with `nomic-embed-text` pulled, same
+  reasoning as `data/` being gitignored.
+- Slice B's `Retriever` embeds every query at request time by calling Ollama directly — fine for the
+  15-pair eval set, would need batching/caching for anything larger.
 
 ---
 
 ## If resuming: fastest way back in
 
-1. `cd code/matching && python3 run_matching.py` reproduces the headline numbers in ~2 seconds — good
-   first move to confirm nothing's drifted.
-2. Read `FAILURE_LOG.md` top to bottom — three entries, each self-contained, each with "what it would
+1. `cd code/matching && python3 run_matching.py` reproduces the matching headline numbers in ~2 seconds.
+2. `ollama serve` (if not already running), then `cd code/qa && python3 run_eval.py` reproduces the
+   Slice B numbers in under a minute — `embeddings.json` is already built, no re-embedding needed unless
+   `chunks.json` changed.
+3. Read `FAILURE_LOG.md` top to bottom — six entries now, each self-contained, each with "what it would
    take to fix" already written out.
-3. The two-week plan (from the 19 August planning conversation): synthetic inventory + cascade (done,
-   this file) → minimal grounded-answering slice → consolidate failure log → draft the memo → send early
-   September.
+4. What's left before the memo: format comparison (CSAF vs. HTML accuracy, filtering the existing chunk
+   store — no new build), then draft and send. Target: early September.

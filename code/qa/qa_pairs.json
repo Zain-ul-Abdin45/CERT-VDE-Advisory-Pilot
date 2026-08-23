@@ -1,0 +1,107 @@
+[
+  {
+    "id": "q1",
+    "question": "What firmware version fixes the CODESYS vulnerability in the ifm CR3171?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-005",
+    "expected_keywords": ["3.3"]
+  },
+  {
+    "id": "q2",
+    "question": "What is the CVSS base score of the WAGO early-boot diagnostic exposure vulnerability, CVE-2026-4769?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-031",
+    "expected_keywords": ["9.8"]
+  },
+  {
+    "id": "q3",
+    "question": "What firmware version should MBS UGW web GUI customers update to?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-039",
+    "expected_keywords": ["V6_00_07"]
+  },
+  {
+    "id": "q4",
+    "question": "What versions of ibaPDA and ibaDatCoordinator fix the .NET BinaryFormatter deserialization vulnerability?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-051",
+    "expected_keywords": ["8.14.0", "4.0.7"]
+  },
+  {
+    "id": "q5",
+    "question": "What firmware version fixes the unauthenticated log download vulnerability in Phoenix Contact CHARX SEC-3xxx charging controllers?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-060",
+    "expected_keywords": ["1.9.0"]
+  },
+  {
+    "id": "q6",
+    "question": "What version of the FDI Package library addresses the Endress+Hauser iDTM debug interface vulnerability?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-065",
+    "expected_keywords": ["V2.02.00", "2.02.00"]
+  },
+  {
+    "id": "q7",
+    "question": "What is the METTLER TOLEDO FreshWay B/D advisory actually about?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-066",
+    "expected_keywords": ["Windows", "Microsoft"]
+  },
+  {
+    "id": "q8",
+    "question": "What version should Balluff BNI EGW-720-007-K095 firmware be updated to?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-049",
+    "expected_keywords": ["2.4.1"]
+  },
+  {
+    "id": "q9",
+    "question": "What version fixes the mbCONNECT24 hidden configuration access vulnerability?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-068",
+    "expected_keywords": ["2.20.2"]
+  },
+  {
+    "id": "q10",
+    "question": "What version fixes the Helmholz myREX24V2 hidden configuration access vulnerability?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-070",
+    "expected_keywords": ["2.20.2"]
+  },
+  {
+    "id": "q11",
+    "question": "What firmware versions fix the ADS-TEC IRF1000 and IRF3000 vulnerabilities?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-076",
+    "expected_keywords": ["2.3.0"]
+  },
+  {
+    "id": "q12",
+    "question": "What is the capital of France?",
+    "answerable": false,
+    "expected_advisory_id": null,
+    "expected_keywords": []
+  },
+  {
+    "id": "q13",
+    "question": "How does one bake sourdough bread?",
+    "answerable": false,
+    "expected_advisory_id": null,
+    "expected_keywords": []
+  },
+  {
+    "id": "q14",
+    "question": "Which advisory in this corpus discusses a supply-chain attack on the Python Package Index (PyPI)?",
+    "answerable": false,
+    "expected_advisory_id": null,
+    "expected_keywords": []
+  },
+  {
+    "id": "q15",
+    "question": "What is the recommended treatment for a Cisco IOS XE zero-day vulnerability?",
+    "answerable": false,
+    "expected_advisory_id": null,
+    "expected_keywords": []
+  }
+]
