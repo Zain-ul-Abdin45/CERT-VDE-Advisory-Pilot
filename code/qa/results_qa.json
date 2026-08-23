@@ -11,7 +11,7 @@
     "cited_correct_source": true,
     "faithful_keyword_check": true,
     "best_distance": 0.17283447236956118,
-    "answer": "Firmware version 3.3.\n\nSource: VDE-2026-005 / document_note:description",
+    "answer": "3.3\n\nSource: VDE-2026-005 / document_note:description",
     "retrieved": [
       {
         "advisory_id": "VDE-2026-005",
@@ -29,14 +29,14 @@
         "cosine_distance": 0.31823703635904643
       },
       {
-        "advisory_id": "VDE-2026-062",
-        "section": "document_note:description",
-        "cosine_distance": 0.32229913521880005
-      },
-      {
         "advisory_id": "VDE-2026-077",
         "section": "document_note:description",
         "cosine_distance": 0.2730393870935999
+      },
+      {
+        "advisory_id": "VDE-2026-062",
+        "section": "document_note:description",
+        "cosine_distance": 0.32229913521880005
       }
     ]
   },
@@ -52,7 +52,7 @@
     "cited_correct_source": true,
     "faithful_keyword_check": true,
     "best_distance": 0.21495019393324377,
-    "answer": "The CVSS base score of the WAGO early-boot diagnostic exposure vulnerability, CVE-2026-4769, is 9.8.\n\nSource: VDE-2026-031 / html_section:cve-2026-47699.8",
+    "answer": "The CVSS base score of the WAGO early-boot diagnostic exposure vulnerability, CVE-2026-4769, is 9.8.\n\nSource: VDE-2026-031 / vulnerability_score:cvss",
     "retrieved": [
       {
         "advisory_id": "VDE-2026-031",
@@ -60,14 +60,14 @@
         "cosine_distance": 0.21495019393324377
       },
       {
-        "advisory_id": "VDE-2026-031",
-        "section": "html_section:cve-2026-47699.8",
-        "cosine_distance": 0.2162579364687408
-      },
-      {
         "advisory_id": "VDE-2026-065",
         "section": "vulnerability_score:cvss",
         "cosine_distance": 0.21543355146401344
+      },
+      {
+        "advisory_id": "VDE-2026-031",
+        "section": "html_section:cve-2026-47699.8",
+        "cosine_distance": 0.2162579364687408
       },
       {
         "advisory_id": "VDE-2026-076",
@@ -134,7 +134,7 @@
     "cited_correct_source": true,
     "faithful_keyword_check": true,
     "best_distance": 0.13867051113620443,
-    "answer": "The fixed versions are ibaPDA v8.14.0 and ibaDatCoordinator v4.0.7.\n\nSource: VDE-2026-051 / document_note:description, VDE-2026-051 / html_section:cve-2026-80249.8",
+    "answer": "The affected applications, specifically ibaPDA and ibaDatCoordinator, can be fixed by updating to the following versions:\n- ibaPDA v8.14.0\n- ibaDatCoordinator v4.0.7 \n\nSource: VDE-2026-051 / document_note:description",
     "retrieved": [
       {
         "advisory_id": "VDE-2026-051",
@@ -143,13 +143,13 @@
       },
       {
         "advisory_id": "VDE-2026-051",
-        "section": "vulnerability_note:description",
-        "cosine_distance": 0.2789607209197297
+        "section": "document_note:description",
+        "cosine_distance": 0.2021150960802659
       },
       {
         "advisory_id": "VDE-2026-051",
-        "section": "document_note:description",
-        "cosine_distance": 0.2021150960802659
+        "section": "vulnerability_note:description",
+        "cosine_distance": 0.2789607209197297
       },
       {
         "advisory_id": "VDE-2026-051",
@@ -175,7 +175,7 @@
     "cited_correct_source": true,
     "faithful_keyword_check": true,
     "best_distance": 0.1205850050464925,
-    "answer": "The firmware version that fixes the unauthenticated log download vulnerability is 1.9.0.\n\nSource: VDE-2026-060 / document_note:description, VDE-2026-060 / remediation:vendor_fix",
+    "answer": "Firmware version 1.9.0 fixes this vulnerability.\n\nSource: VDE-2026-060 / document_note:description, VDE-2026-060 / remediation:vendor_fix",
     "retrieved": [
       {
         "advisory_id": "VDE-2026-060",
@@ -216,7 +216,7 @@
     "cited_correct_source": true,
     "faithful_keyword_check": true,
     "best_distance": 0.1274767304808695,
-    "answer": "The updated version that addresses this vulnerability is V2.02.00.\n\nSource: VDE-2026-065 / document_note:description, VDE-2026-065 / remediation:vendor_fix",
+    "answer": "The updated version that addresses the vulnerability is V2.02.00.\n\nSource: VDE-2026-065 / document_note:description, VDE-2026-065 / remediation:vendor_fix",
     "retrieved": [
       {
         "advisory_id": "VDE-2026-065",
@@ -250,14 +250,14 @@
     "question": "What is the METTLER TOLEDO FreshWay B/D advisory actually about?",
     "answerable": true,
     "expected_advisory_id": "VDE-2026-066",
-    "abstained": true,
-    "abstention_correct": false,
+    "abstained": false,
+    "abstention_correct": true,
     "retrieval_rank": 1,
     "retrieval_hit": true,
-    "cited_correct_source": false,
+    "cited_correct_source": true,
     "faithful_keyword_check": false,
     "best_distance": 0.3572289412221821,
-    "answer": "There is no information provided in the excerpts that directly answers the question. The excerpts mention METTLER TOLEDO but it seems to be more related to legal disclaimers and a separate advisory (VDE-2026-066) mentioning a Windows update for FreshWay B scale, rather than an actual advisory about it.\n\nI couldn't find content relevant to that question in the collected advisories.",
+    "answer": "The advisory does not mention the METTLER TOLEDO FreshWay B/D. \n\nSource: VDE-2026-066 / document_note:legal_disclaimer, VDE-2026-066 / remediation:mitigation",
     "retrieved": [
       {
         "advisory_id": "VDE-2026-066",
@@ -270,9 +270,9 @@
         "cosine_distance": 0.45547934300328485
       },
       {
-        "advisory_id": "VDE-2026-019",
-        "section": "document_note:other",
-        "cosine_distance": 0.4873161621717633
+        "advisory_id": "VDE-2026-049",
+        "section": "document_note:description",
+        "cosine_distance": 0.4867717684142716
       },
       {
         "advisory_id": "VDE-2026-066",
@@ -298,7 +298,7 @@
     "cited_correct_source": true,
     "faithful_keyword_check": true,
     "best_distance": 0.17280721251031506,
-    "answer": "The firmware of BNI EGW-720-007-K095 should be updated to version 2.4.1 or later.\n\nSource: VDE-2026-049 / document_note:description",
+    "answer": "The fixed firmware for Balluff BNI EGW-720-007-K095 contains updates for the vulnerabilities covered by this advisory, and it should be updated to version 2.4.1 or later.\n\nSource: VDE-2026-049 / document_note:description",
     "retrieved": [
       {
         "advisory_id": "VDE-2026-049",
@@ -339,7 +339,7 @@
     "cited_correct_source": true,
     "faithful_keyword_check": true,
     "best_distance": 0.20018400520105917,
-    "answer": "The version that fixes the mbCONNECT24/mymbCONNECT24 instance, which has a hidden configuration method vulnerability, is 2.20.2.\n\nSource: VDE-2026-068 / document_note:description, VDE-2026-068 / remediation:vendor_fix",
+    "answer": "2.20.2 \n\nSource: VDE-2026-068 / document_note:description, VDE-2026-068 / remediation:vendor_fix",
     "retrieved": [
       {
         "advisory_id": "VDE-2026-068",
@@ -380,12 +380,17 @@
     "cited_correct_source": true,
     "faithful_keyword_check": true,
     "best_distance": 0.22958567466382895,
-    "answer": "The vulnerable version is not explicitly mentioned in any of the excerpts as being fixed by an update, but we can infer that the vulnerable version was at least up to 2.20.1 (since 2.20.2 is mentioned as a newer version). The exact version number for the fix is mentioned in VDE-2026-038 / document_note:description: \"TURCK recommends to update to the latest 2.1.2.0 Firmware Release which fixes these vulnerabilities.\"\n\nSource: VDE-2026-070 / remediation:vendor_fix, VDE-2026-038 / document_note:description",
+    "answer": "The version that fixes the vulnerability is 2.20.2 for the myREX24V2/myREX24V2.virtual instance.\n\nSource: VDE-2026-070 / document_note:description, VDE-2026-070 / remediation:vendor_fix",
     "retrieved": [
       {
         "advisory_id": "VDE-2026-070",
         "section": "document_note:summary",
         "cosine_distance": 0.22958567466382895
+      },
+      {
+        "advisory_id": "VDE-2026-070",
+        "section": "document_note:description",
+        "cosine_distance": 0.30491046291256496
       },
       {
         "advisory_id": "VDE-2026-068",
@@ -394,18 +399,13 @@
       },
       {
         "advisory_id": "VDE-2026-070",
-        "section": "document_note:description",
+        "section": "remediation:vendor_fix",
         "cosine_distance": 0.30491046291256496
       },
       {
         "advisory_id": "VDE-2026-038",
         "section": "document_note:description",
         "cosine_distance": 0.3144442109401244
-      },
-      {
-        "advisory_id": "VDE-2026-070",
-        "section": "remediation:vendor_fix",
-        "cosine_distance": 0.30491046291256496
       }
     ]
   },
@@ -421,7 +421,7 @@
     "cited_correct_source": true,
     "faithful_keyword_check": true,
     "best_distance": 0.10866025024956871,
-    "answer": "The firmware versions that fix the ADS-TEC IRF1000 and IRF3000 vulnerabilities are IRF1000 v2.3.0, IRF3000 v2.3.0 or later.\n\nSource: VDE-2026-076 / document_note:description",
+    "answer": "The firmware versions that fix the vulnerabilities are IRF1000 v2.3.0 and IRF3000 v2.3.0 or later.\n\nSource: VDE-2026-076 / document_note:description, VDE-2026-076 / remediation:vendor_fix (all occurrences)",
     "retrieved": [
       {
         "advisory_id": "VDE-2026-076",
@@ -541,16 +541,6 @@
         "cosine_distance": 0.3626077731551187
       },
       {
-        "advisory_id": "VDE-2026-040",
-        "section": "html_section:cve-2026-352257.5",
-        "cosine_distance": 0.3574278545914511
-      },
-      {
-        "advisory_id": "VDE-2026-076",
-        "section": "html_section:cve-2025-694217.5",
-        "cosine_distance": 0.3632619700324947
-      },
-      {
         "advisory_id": "VDE-2026-038",
         "section": "html_section:cve-2026-54168.8",
         "cosine_distance": 0.3593622882186882
@@ -559,6 +549,139 @@
         "advisory_id": "VDE-2026-076",
         "section": "vulnerability_note:description",
         "cosine_distance": 0.36879511809947507
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "section": "html_section:cve-2025-694217.5",
+        "cosine_distance": 0.3632619700324947
+      },
+      {
+        "advisory_id": "VDE-2026-062",
+        "section": "document_note:description",
+        "cosine_distance": 0.37281577834737056
+      }
+    ]
+  },
+  {
+    "id": "q16",
+    "question": "What version fixes the WAGO early-boot diagnostic exposure vulnerability?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-031",
+    "abstained": true,
+    "abstention_correct": false,
+    "retrieval_rank": 1,
+    "retrieval_hit": true,
+    "cited_correct_source": false,
+    "faithful_keyword_check": false,
+    "best_distance": 0.26146615193717804,
+    "answer": "I couldn't find content relevant to that question in the collected advisories.",
+    "retrieved": [
+      {
+        "advisory_id": "VDE-2026-031",
+        "section": "vulnerability_note:description",
+        "cosine_distance": 0.27312006237180764
+      },
+      {
+        "advisory_id": "VDE-2026-031",
+        "section": "html_section:cve-2026-47699.8",
+        "cosine_distance": 0.26146615193717804
+      },
+      {
+        "advisory_id": "VDE-2026-031",
+        "section": "document_note:summary",
+        "cosine_distance": 0.29702615644853825
+      },
+      {
+        "advisory_id": "VDE-2026-060",
+        "section": "document_note:description",
+        "cosine_distance": 0.3352984013225099
+      },
+      {
+        "advisory_id": "VDE-2026-038",
+        "section": "document_note:description",
+        "cosine_distance": 0.3284949258973944
+      }
+    ]
+  },
+  {
+    "id": "q17",
+    "question": "What is the fixed version for WAGO System I/O Field devices?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-031",
+    "abstained": false,
+    "abstention_correct": true,
+    "retrieval_rank": 1,
+    "retrieval_hit": true,
+    "cited_correct_source": true,
+    "faithful_keyword_check": true,
+    "best_distance": 0.2765177919769657,
+    "answer": "The fixed versions for WAGO System I/O Field devices are:\n1.2.1.100, 1.2.7.100, 1.2.7.103, 1.2.1.102, 1.2.5.101, 1.2.1.100, 1.2.7.100, and 1.2.7.103.\n\nSource: VDE-2026-031 / document_note:description",
+    "retrieved": [
+      {
+        "advisory_id": "VDE-2026-031",
+        "section": "document_note:description",
+        "cosine_distance": 0.2765177919769657
+      },
+      {
+        "advisory_id": "VDE-2026-031",
+        "section": "remediation:vendor_fix",
+        "cosine_distance": 0.2765177919769657
+      },
+      {
+        "advisory_id": "VDE-2026-031",
+        "section": "document_note:summary",
+        "cosine_distance": 0.28430317158437046
+      },
+      {
+        "advisory_id": "VDE-2026-031",
+        "section": "vulnerability_note:description",
+        "cosine_distance": 0.29978420794459915
+      },
+      {
+        "advisory_id": "VDE-2026-031",
+        "section": "html_section:cve-2026-47699.8",
+        "cosine_distance": 0.30412857507562996
+      }
+    ]
+  },
+  {
+    "id": "q18",
+    "question": "What is the CVSS base score of CVE-2026-4769?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-031",
+    "abstained": false,
+    "abstention_correct": true,
+    "retrieval_rank": 3,
+    "retrieval_hit": true,
+    "cited_correct_source": true,
+    "faithful_keyword_check": true,
+    "best_distance": 0.11482834536465159,
+    "answer": "The CVSS base score of CVE-2026-4769 is 9.8.\n\nSource: VDE-2026-031 / vulnerability_score:cvss",
+    "retrieved": [
+      {
+        "advisory_id": "VDE-2026-065",
+        "section": "vulnerability_score:cvss",
+        "cosine_distance": 0.11482834536465159
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "section": "vulnerability_score:cvss",
+        "cosine_distance": 0.1172864491650234
+      },
+      {
+        "advisory_id": "VDE-2026-031",
+        "section": "vulnerability_score:cvss",
+        "cosine_distance": 0.1229218579742809
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "section": "vulnerability_score:cvss",
+        "cosine_distance": 0.11980288566172093
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "section": "vulnerability_score:cvss",
+        "cosine_distance": 0.12047616275959516
       }
     ]
   }

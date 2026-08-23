@@ -2,7 +2,8 @@
 Slice B evaluation: retrieval quality, abstention accuracy, and attribution
 on the hand-labelled qa_pairs.json set (roadmap Phase 5 metrics, scaled to
 this pilot's 15-pair set per the Kickoff Plan's "10-15, scaled down from
-20-30 given the compressed timeline").
+20-30 given the compressed timeline" — plus 3 pairs added after ad-hoc
+testing surfaced FAILURE_LOG.md #7 and #8, see qa_pairs.json's "note" fields).
 
 Faithfulness here is a keyword-presence heuristic, not a full NLI check —
 flagged as such in the printed report. Every question's full context and
@@ -114,7 +115,7 @@ def main():
     print(f"n = {n} ({len(answerable_rows)} answerable, {len(unanswerable_rows)} unanswerable)")
     print(f"Retrieval hit rate @5 (answerable only): {retrieval_hit_rate:.3f}")
     print(f"MRR (answerable only):                   {mrr:.3f}")
-    print(f"Abstention accuracy (all 15):             {abstention_acc:.3f}")
+    print(f"Abstention accuracy (all {n}):             {abstention_acc:.3f}")
     print(f"False-answer rate on unanswerable (should be 0): {false_answer_rate:.3f}")
     print(f"Attribution accuracy (correct source cited):     {attribution_acc:.3f}")
     print(f"Faithfulness (keyword heuristic, answerable only): {faithfulness:.3f}")

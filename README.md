@@ -23,12 +23,16 @@ against real data.
   separate, lower 33% accuracy on version-range applicability with a specific documented cause
   (`FAILURE_LOG.md` entry #3, `results_matching.json`).
 - **Grounded answering + abstention (Week 3b):** hybrid BM25+vector retrieval (Ollama `nomic-embed-text`)
-  with RRF fusion and cosine-threshold abstention, generation via Ollama `llama3.1`, scored against 15
-  hand-labelled Q&A pairs. **Retrieval hit rate @5 = 1.000, abstention accuracy = 0.933, attribution
-  accuracy = 0.909**, zero false answers on deliberately unanswerable questions. Porting the RAG project's
+  with RRF fusion and cosine-threshold abstention, generation via Ollama `llama3.1`, scored against 18
+  hand-labelled Q&A pairs. **Retrieval hit rate @5 = 1.000, abstention accuracy = 0.944, attribution
+  accuracy = 0.929**, zero false answers on deliberately unanswerable questions. Porting the RAG project's
   default abstention threshold unchanged silently failed on this corpus and had to be recalibrated
   (`FAILURE_LOG.md` entry #4). A prompt-injection sanity check resisted one synthetic injection attempt,
-  narrowly scoped (`FAILURE_LOG.md` entry #6). Full results in `code/qa/results_qa.json`.
+  narrowly scoped (`FAILURE_LOG.md` entry #6). Follow-up testing found and fixed a real bug where BM25's
+  tokenizer silently broke exact CVE-ID matching — hybrid search's whole reason for existing on
+  identifiers (`FAILURE_LOG.md` entry #8) — and separately confirmed a table-formatted remediation section
+  can still evade retrieval on vulnerability-phrased questions (`FAILURE_LOG.md` entry #7). Full results in
+  `code/qa/results_qa.json`.
 - **Not yet built:** the CSAF/HTML ingestion parsers as a standalone reusable module (`code/ingestion/` is
   still scaffolding — both the matching cascade and Slice B work directly against raw files without it),
   the structured store, the format comparison (Week 4).

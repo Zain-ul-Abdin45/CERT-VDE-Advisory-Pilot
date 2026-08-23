@@ -9,6 +9,7 @@ to disk since the chunk set is static; re-run build_embeddings() if chunks.json
 changes.
 """
 import json
+import re
 from pathlib import Path
 
 import requests
@@ -35,7 +36,14 @@ CANDIDATE_MULTIPLIER = 4  # fetch TOP_K * this many candidates before fusion
 
 
 def _tokenize(text: str) -> list[str]:
-    return text.lower().split()
+    # Plain .lower().split() left punctuation stuck to tokens (e.g. a query
+    # ending "CVE-2026-4769?" tokenized to "cve-2026-4769?", which never
+    # matches the identical chunk-side token without the "?") — meaning BM25
+    # could not do exact CVE-ID matching at all, precisely the case hybrid
+    # search exists to guarantee (see FAILURE_LOG.md #8). This keeps
+    # hyphen-joined identifiers (CVE-2026-4769, CVSS:3.1) as single tokens
+    # while stripping surrounding punctuation on both the query and index side.
+    return re.findall(r"[a-z0-9]+(?:[-:.][a-z0-9]+)*", text.lower())
 
 
 def _cosine_distance(a: list[float], b: list[float]) -> float:

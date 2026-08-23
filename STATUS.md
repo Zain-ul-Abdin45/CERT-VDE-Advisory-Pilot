@@ -71,16 +71,26 @@ Companion docs, outside this repo, in `research paper/inIT/`:
      (`FAILURE_LOG.md` #4).
    - `generate_answer.py` — grounded generation via Ollama `llama3.1`, cites `advisory_id / section`,
      refuses when retrieval abstains or evidence is insufficient.
-   - `run_eval.py` — scores the pipeline against `qa_pairs.json` (11 answerable + 4 deliberately
+   - `run_eval.py` — scores the pipeline against `qa_pairs.json` (14 answerable + 4 deliberately
      unanswerable hand-written pairs), writes `results_qa.json`.
-   - **Result: retrieval hit rate @5 = 1.000, MRR = 1.000, abstention accuracy = 0.933 (14/15),
-     false-answer rate on unanswerable questions = 0.000, attribution accuracy = 0.909,
-     faithfulness (keyword heuristic) = 0.909.** The one miss is a genuine retrieval-ranking finding, not
-     a bug: boilerplate legal-disclaimer text outranked the actual answer chunk on a vague query
-     (`FAILURE_LOG.md` #5).
+   - **Result: retrieval hit rate @5 = 1.000, MRR = 0.952, abstention accuracy = 0.944 (17/18),
+     false-answer rate on unanswerable questions = 0.000, attribution accuracy = 0.929,
+     faithfulness (keyword heuristic) = 0.857.** The one miss (q16) is a genuine, reproduced retrieval-
+     ranking finding, not a bug: a remediation section formatted as a markdown table has little
+     vulnerability-vocabulary overlap with how a person would ask about it (`FAILURE_LOG.md` #7).
    - `prompt_injection_check.py` — Week 3c. One synthetic instruction-bearing chunk, forced into context;
      `llama3.1` did not obey it, with or without an explicit anti-injection line in the system prompt.
      Real but narrow result — one crude injection shape, not a robustness claim (`FAILURE_LOG.md` #6).
+   - **Follow-up testing (23 August, same day) found and fixed a real bug:** BM25's tokenizer
+     (`text.lower().split()`, no punctuation stripping) meant a query ending "...CVE-2026-4769?" never
+     matched the identical chunk-side token "cve-2026-4769" — so hybrid search's whole reason for
+     existing (exact-identifier lookup) silently didn't work for bare CVE-ID questions. Neither of the
+     original 15 pairs isolated a CVE ID without also naming a vendor/product, so this went uncaught
+     until tested directly. Fixed with a regex tokenizer that strips punctuation while keeping
+     hyphen/colon-joined identifiers intact (`retrieval.py::_tokenize`); the target chunk went from
+     outside the top-5 entirely to BM25 rank #1. Re-ran the full eval afterward — no regression
+     (`FAILURE_LOG.md` #8). Three pairs added to `qa_pairs.json` (q16-q18) to lock in coverage for both
+     this fix and the table-remediation finding above.
 
 ---
 

@@ -103,5 +103,29 @@
     "answerable": false,
     "expected_advisory_id": null,
     "expected_keywords": []
+  },
+  {
+    "id": "q16",
+    "question": "What version fixes the WAGO early-boot diagnostic exposure vulnerability?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-031",
+    "expected_keywords": ["1.2.1.100"],
+    "note": "FAILURE_LOG.md #7 - remediation is a markdown table with little vulnerability-vocabulary overlap; vulnerability-phrased questions like this one can miss it."
+  },
+  {
+    "id": "q17",
+    "question": "What is the fixed version for WAGO System I/O Field devices?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-031",
+    "expected_keywords": ["1.2.1.100"],
+    "note": "FAILURE_LOG.md #7 - same underlying fact as q16, phrased with remediation-style vocabulary instead."
+  },
+  {
+    "id": "q18",
+    "question": "What is the CVSS base score of CVE-2026-4769?",
+    "answerable": true,
+    "expected_advisory_id": "VDE-2026-031",
+    "expected_keywords": ["9.8"],
+    "note": "FAILURE_LOG.md #8 - bare CVE-ID lookup, no vendor/product named. Caught a tokenizer bug that broke BM25 exact-match entirely; none of q1-q15 isolated a CVE ID this way."
   }
 ]

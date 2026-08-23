@@ -38,7 +38,8 @@ def format_context(results) -> str:
     return "\n\n".join(parts)
 
 
-def answer(retriever: Retriever, question: str, top_k: int = 5) -> dict:
+def answer(retriever: Retriever, question: str, top_k: int = 5,
+           system_prompt: str = SYSTEM_PROMPT) -> dict:
     results, best_distance, abstained = retriever.search(question, top_k=top_k)
 
     if abstained:
@@ -58,7 +59,7 @@ def answer(retriever: Retriever, question: str, top_k: int = 5) -> dict:
         json={
             "model": CHAT_MODEL,
             "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt},
             ],
             "stream": False,
