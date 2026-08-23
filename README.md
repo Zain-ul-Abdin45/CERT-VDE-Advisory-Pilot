@@ -38,6 +38,12 @@ against real data.
   accuracy 0.857, HTML-only 0.000** — a root-caused, not just measured, failure: CERT@VDE's HTML page
   gives each advisory one Remediation section competing against one section per CVE, so the fix gets
   crowded out of retrieval for multi-CVE advisories (`FAILURE_LOG.md` entry #9).
+- **Component-knowledge prototype (23 August):** grows a dictionary of known embedded components
+  directly from NVD's own vendor/product field on cross-vendor mismatches, checked against each new
+  advisory in real chronological order. **28/42 (66.7%) of mismatches recognized before the advisory
+  containing them was processed.** Three real bugs found and fixed during calibration — the last one a
+  concrete, measured validation of the debrief's original caution that free-text mining is fragile even
+  in a constrained, dictionary-lookup form (`FAILURE_LOG.md` entry #10, `code/component_kb/`).
 - **Not built, deliberately:** the CSAF/HTML ingestion parsers as a standalone reusable module
   (`code/ingestion/` is still scaffolding — both the matching cascade and Slice B work directly against
   raw files without it) and the structured store — neither is needed for any measured number above.
@@ -63,6 +69,8 @@ code/
     run_eval.py                  # scores retrieval/abstention/attribution/faithfulness, writes results_qa.json
     prompt_injection_check.py    # Week 3c: one synthetic instruction-bearing chunk, forced into context
     format_comparison.py         # Week 4: same questions against CSAF-only vs HTML-only chunk subsets
+  component_kb/
+    build_and_eval.py            # grows a component dictionary from NVD's own vendor field, measures recognition
 ```
 
 Raw advisory data and NVD pulls are kept locally (not committed here, see `.gitignore`) under `data/`.

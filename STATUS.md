@@ -107,6 +107,17 @@ Companion docs, outside this repo, in `research paper/inIT/`:
 - **The memo itself.** In progress, being drafted separately (outside this repo). Target: early
   September 2026.
 
+**Beyond the original 4-week plan, prototyped 23 August:**
+- **Component-knowledge base** (`code/component_kb/`) — one of the two paths named in the debrief's
+  entry #2 honesty note (SBOM/AAS structural fact vs. free-text mining) actually built and measured.
+  Grows a component dictionary from NVD's own vendor field, checked against each new advisory in real
+  chronological order (no lookahead). **28/42 (66.7%) of cross-vendor mismatches recognized before the
+  advisory containing them was processed.** Three real bugs found during calibration — the last one
+  (`partial_ratio` scoring 85.7 on a totally unrelated CVE purely from character coincidence, after an
+  earlier fix looked complete) is a concrete, measured validation of the debrief's original caution that
+  free-text mining is fragile, even constrained to dictionary lookup. Fixed by switching to strict
+  word-boundary matching. Full detail in `FAILURE_LOG.md` #10.
+
 **Resolved, previously listed here as open:**
 - `code/ingestion/pdf/extract_report.py` — checked directly: it was never actually placed in
   `code/ingestion/pdf/` (just a `.gitkeep`), so there's nothing to decide keep-vs-cut on. The earlier

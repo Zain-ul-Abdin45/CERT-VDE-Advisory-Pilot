@@ -1,0 +1,476 @@
+[
+  {
+    "advisory_id": "VDE-2026-019",
+    "release_date": "2026-04-23T12:00:00.000Z",
+    "cve": "CVE-2018-25193",
+    "advisory_vendor": "Pilz GmbH & Co. KG",
+    "nvd_vendors": [
+      "Cesanta"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 0
+  },
+  {
+    "advisory_id": "VDE-2026-005",
+    "release_date": "2026-05-06T08:00:00.000Z",
+    "cve": "CVE-2025-41691",
+    "advisory_vendor": "ifm electronic GmbH",
+    "nvd_vendors": [
+      "CODESYS"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 1
+  },
+  {
+    "advisory_id": "VDE-2026-005",
+    "release_date": "2026-05-06T08:00:00.000Z",
+    "cve": "CVE-2025-41659",
+    "advisory_vendor": "ifm electronic GmbH",
+    "nvd_vendors": [
+      "CODESYS"
+    ],
+    "recognized_by_dictionary": "codesys",
+    "dictionary_size_at_time": 2
+  },
+  {
+    "advisory_id": "VDE-2026-005",
+    "release_date": "2026-05-06T08:00:00.000Z",
+    "cve": "CVE-2025-41658",
+    "advisory_vendor": "ifm electronic GmbH",
+    "nvd_vendors": [
+      "CODESYS"
+    ],
+    "recognized_by_dictionary": "codesys",
+    "dictionary_size_at_time": 2
+  },
+  {
+    "advisory_id": "VDE-2026-038",
+    "release_date": "2026-06-16T10:00:00.000Z",
+    "cve": "CVE-2025-68615",
+    "advisory_vendor": "TURCK GmbH",
+    "nvd_vendors": [
+      "net-snmp"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 2
+  },
+  {
+    "advisory_id": "VDE-2026-070",
+    "release_date": "2026-06-23T11:00:00.000Z",
+    "cve": "CVE-2026-10521",
+    "advisory_vendor": "Helmholz GmbH & Co. KG",
+    "nvd_vendors": [
+      "MB connect line"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 3
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2025-68121",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "Go standard library"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 4
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2023-3128",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "Grafana"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 5
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2025-15467",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "OpenSSL",
+      "Red Hat",
+      "Siemens"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 6
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2025-41115",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "Grafana"
+    ],
+    "recognized_by_dictionary": "grafana",
+    "dictionary_size_at_time": 9
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2026-1229",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "Cloudflare"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 9
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2022-21703",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "grafana"
+    ],
+    "recognized_by_dictionary": "grafana",
+    "dictionary_size_at_time": 10
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2022-23498",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "grafana"
+    ],
+    "recognized_by_dictionary": "grafana",
+    "dictionary_size_at_time": 10
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2022-24812",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "grafana"
+    ],
+    "recognized_by_dictionary": "grafana",
+    "dictionary_size_at_time": 10
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2024-1442",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "Grafana"
+    ],
+    "recognized_by_dictionary": "grafana",
+    "dictionary_size_at_time": 10
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2024-9264",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "Grafana",
+      "grafana"
+    ],
+    "recognized_by_dictionary": "grafana",
+    "dictionary_size_at_time": 10
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2022-31097",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "grafana"
+    ],
+    "recognized_by_dictionary": "grafana",
+    "dictionary_size_at_time": 10
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2025-4674",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "Go toolchain"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 10
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2025-61732",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "Go toolchain",
+      "Red Hat"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 11
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2022-29170",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "grafana"
+    ],
+    "recognized_by_dictionary": "grafana",
+    "dictionary_size_at_time": 11
+  },
+  {
+    "advisory_id": "VDE-2026-049",
+    "release_date": "2026-06-30T10:00:00.000Z",
+    "cve": "CVE-2024-56406",
+    "advisory_vendor": "Balluff GmbH",
+    "nvd_vendors": [
+      "perl"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 11
+  },
+  {
+    "advisory_id": "VDE-2026-066",
+    "release_date": "2026-07-14T10:00:00.000Z",
+    "cve": "CVE-2026-25172",
+    "advisory_vendor": "Mettler-Toledo GmbH",
+    "nvd_vendors": [
+      "Microsoft"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 12
+  },
+  {
+    "advisory_id": "VDE-2026-066",
+    "release_date": "2026-07-14T10:00:00.000Z",
+    "cve": "CVE-2026-26128",
+    "advisory_vendor": "Mettler-Toledo GmbH",
+    "nvd_vendors": [
+      "Microsoft"
+    ],
+    "recognized_by_dictionary": "microsoft",
+    "dictionary_size_at_time": 13
+  },
+  {
+    "advisory_id": "VDE-2026-066",
+    "release_date": "2026-07-14T10:00:00.000Z",
+    "cve": "CVE-2026-23673",
+    "advisory_vendor": "Mettler-Toledo GmbH",
+    "nvd_vendors": [
+      "Microsoft"
+    ],
+    "recognized_by_dictionary": "microsoft",
+    "dictionary_size_at_time": 13
+  },
+  {
+    "advisory_id": "VDE-2026-066",
+    "release_date": "2026-07-14T10:00:00.000Z",
+    "cve": "CVE-2026-25185",
+    "advisory_vendor": "Mettler-Toledo GmbH",
+    "nvd_vendors": [
+      "Microsoft"
+    ],
+    "recognized_by_dictionary": "microsoft",
+    "dictionary_size_at_time": 13
+  },
+  {
+    "advisory_id": "VDE-2026-066",
+    "release_date": "2026-07-14T10:00:00.000Z",
+    "cve": "CVE-2026-25181",
+    "advisory_vendor": "Mettler-Toledo GmbH",
+    "nvd_vendors": [
+      "Microsoft"
+    ],
+    "recognized_by_dictionary": "microsoft",
+    "dictionary_size_at_time": 13
+  },
+  {
+    "advisory_id": "VDE-2026-066",
+    "release_date": "2026-07-14T10:00:00.000Z",
+    "cve": "CVE-2026-25179",
+    "advisory_vendor": "Mettler-Toledo GmbH",
+    "nvd_vendors": [
+      "Microsoft"
+    ],
+    "recognized_by_dictionary": "microsoft",
+    "dictionary_size_at_time": 13
+  },
+  {
+    "advisory_id": "VDE-2026-066",
+    "release_date": "2026-07-14T10:00:00.000Z",
+    "cve": "CVE-2026-25175",
+    "advisory_vendor": "Mettler-Toledo GmbH",
+    "nvd_vendors": [
+      "Microsoft"
+    ],
+    "recognized_by_dictionary": "microsoft",
+    "dictionary_size_at_time": 13
+  },
+  {
+    "advisory_id": "VDE-2026-066",
+    "release_date": "2026-07-14T10:00:00.000Z",
+    "cve": "CVE-2026-25174",
+    "advisory_vendor": "Mettler-Toledo GmbH",
+    "nvd_vendors": [
+      "Microsoft"
+    ],
+    "recognized_by_dictionary": "microsoft",
+    "dictionary_size_at_time": 13
+  },
+  {
+    "advisory_id": "VDE-2026-066",
+    "release_date": "2026-07-14T10:00:00.000Z",
+    "cve": "CVE-2026-26111",
+    "advisory_vendor": "Mettler-Toledo GmbH",
+    "nvd_vendors": [
+      "Microsoft"
+    ],
+    "recognized_by_dictionary": "microsoft",
+    "dictionary_size_at_time": 13
+  },
+  {
+    "advisory_id": "VDE-2026-066",
+    "release_date": "2026-07-14T10:00:00.000Z",
+    "cve": "CVE-2026-25171",
+    "advisory_vendor": "Mettler-Toledo GmbH",
+    "nvd_vendors": [
+      "Microsoft"
+    ],
+    "recognized_by_dictionary": "microsoft",
+    "dictionary_size_at_time": 13
+  },
+  {
+    "advisory_id": "VDE-2026-076",
+    "release_date": "2026-07-28T10:00:00.000Z",
+    "cve": "CVE-2026-2291",
+    "advisory_vendor": "ads-tec Industrial IT GmbH",
+    "nvd_vendors": [
+      "dnsmasq"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 13
+  },
+  {
+    "advisory_id": "VDE-2026-076",
+    "release_date": "2026-07-28T10:00:00.000Z",
+    "cve": "CVE-2026-4893",
+    "advisory_vendor": "ads-tec Industrial IT GmbH",
+    "nvd_vendors": [
+      "dnsmasq"
+    ],
+    "recognized_by_dictionary": "dnsmasq",
+    "dictionary_size_at_time": 14
+  },
+  {
+    "advisory_id": "VDE-2026-076",
+    "release_date": "2026-07-28T10:00:00.000Z",
+    "cve": "CVE-2026-5172",
+    "advisory_vendor": "ads-tec Industrial IT GmbH",
+    "nvd_vendors": [
+      "Red Hat",
+      "dnsmasq"
+    ],
+    "recognized_by_dictionary": "dnsmasq",
+    "dictionary_size_at_time": 14
+  },
+  {
+    "advisory_id": "VDE-2026-076",
+    "release_date": "2026-07-28T10:00:00.000Z",
+    "cve": "CVE-2026-40510",
+    "advisory_vendor": "ads-tec Industrial IT GmbH",
+    "nvd_vendors": [
+      "OpenSC"
+    ],
+    "recognized_by_dictionary": null,
+    "dictionary_size_at_time": 14
+  },
+  {
+    "advisory_id": "VDE-2026-076",
+    "release_date": "2026-07-28T10:00:00.000Z",
+    "cve": "CVE-2025-68160",
+    "advisory_vendor": "ads-tec Industrial IT GmbH",
+    "nvd_vendors": [
+      "OpenSSL",
+      "Siemens"
+    ],
+    "recognized_by_dictionary": "openssl",
+    "dictionary_size_at_time": 15
+  },
+  {
+    "advisory_id": "VDE-2026-076",
+    "release_date": "2026-07-28T10:00:00.000Z",
+    "cve": "CVE-2025-69418",
+    "advisory_vendor": "ads-tec Industrial IT GmbH",
+    "nvd_vendors": [
+      "OpenSSL",
+      "Siemens"
+    ],
+    "recognized_by_dictionary": "openssl",
+    "dictionary_size_at_time": 15
+  },
+  {
+    "advisory_id": "VDE-2026-076",
+    "release_date": "2026-07-28T10:00:00.000Z",
+    "cve": "CVE-2025-69419",
+    "advisory_vendor": "ads-tec Industrial IT GmbH",
+    "nvd_vendors": [
+      "OpenSSL",
+      "Siemens"
+    ],
+    "recognized_by_dictionary": "openssl",
+    "dictionary_size_at_time": 15
+  },
+  {
+    "advisory_id": "VDE-2026-076",
+    "release_date": "2026-07-28T10:00:00.000Z",
+    "cve": "CVE-2025-69420",
+    "advisory_vendor": "ads-tec Industrial IT GmbH",
+    "nvd_vendors": [
+      "OpenSSL",
+      "Siemens"
+    ],
+    "recognized_by_dictionary": "openssl",
+    "dictionary_size_at_time": 15
+  },
+  {
+    "advisory_id": "VDE-2026-076",
+    "release_date": "2026-07-28T10:00:00.000Z",
+    "cve": "CVE-2025-69421",
+    "advisory_vendor": "ads-tec Industrial IT GmbH",
+    "nvd_vendors": [
+      "OpenSSL",
+      "Siemens"
+    ],
+    "recognized_by_dictionary": "openssl",
+    "dictionary_size_at_time": 15
+  },
+  {
+    "advisory_id": "VDE-2026-076",
+    "release_date": "2026-07-28T10:00:00.000Z",
+    "cve": "CVE-2026-22795",
+    "advisory_vendor": "ads-tec Industrial IT GmbH",
+    "nvd_vendors": [
+      "OpenSSL",
+      "Siemens"
+    ],
+    "recognized_by_dictionary": "openssl",
+    "dictionary_size_at_time": 15
+  },
+  {
+    "advisory_id": "VDE-2026-076",
+    "release_date": "2026-07-28T10:00:00.000Z",
+    "cve": "CVE-2026-22796",
+    "advisory_vendor": "ads-tec Industrial IT GmbH",
+    "nvd_vendors": [
+      "OpenSSL",
+      "Siemens"
+    ],
+    "recognized_by_dictionary": "openssl",
+    "dictionary_size_at_time": 15
+  }
+]

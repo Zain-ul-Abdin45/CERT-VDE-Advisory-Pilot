@@ -1,0 +1,349 @@
+{
+  "cesanta": {
+    "aliases_seen": [
+      "Cesanta"
+    ],
+    "first_seen_advisory": "VDE-2026-019",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-019",
+        "cve": "CVE-2018-25193"
+      }
+    ]
+  },
+  "codesys": {
+    "aliases_seen": [
+      "CODESYS"
+    ],
+    "first_seen_advisory": "VDE-2026-005",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-005",
+        "cve": "CVE-2025-41691"
+      },
+      {
+        "advisory_id": "VDE-2026-005",
+        "cve": "CVE-2025-41659"
+      },
+      {
+        "advisory_id": "VDE-2026-005",
+        "cve": "CVE-2025-41658"
+      }
+    ]
+  },
+  "net-snmp": {
+    "aliases_seen": [
+      "net-snmp"
+    ],
+    "first_seen_advisory": "VDE-2026-038",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-038",
+        "cve": "CVE-2025-68615"
+      }
+    ]
+  },
+  "mb connect line": {
+    "aliases_seen": [
+      "MB connect line"
+    ],
+    "first_seen_advisory": "VDE-2026-070",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-070",
+        "cve": "CVE-2026-10521"
+      }
+    ]
+  },
+  "go standard library": {
+    "aliases_seen": [
+      "Go standard library"
+    ],
+    "first_seen_advisory": "VDE-2026-049",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2025-68121"
+      }
+    ]
+  },
+  "grafana": {
+    "aliases_seen": [
+      "Grafana",
+      "grafana"
+    ],
+    "first_seen_advisory": "VDE-2026-049",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2023-3128"
+      },
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2025-41115"
+      },
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2022-21703"
+      },
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2022-23498"
+      },
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2022-24812"
+      },
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2024-1442"
+      },
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2024-9264"
+      },
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2024-9264"
+      },
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2022-31097"
+      },
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2022-29170"
+      }
+    ]
+  },
+  "openssl": {
+    "aliases_seen": [
+      "OpenSSL"
+    ],
+    "first_seen_advisory": "VDE-2026-049",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2025-15467"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2025-68160"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2025-69418"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2025-69419"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2025-69420"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2025-69421"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2026-22795"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2026-22796"
+      }
+    ]
+  },
+  "red hat": {
+    "aliases_seen": [
+      "Red Hat"
+    ],
+    "first_seen_advisory": "VDE-2026-049",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2025-15467"
+      },
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2025-61732"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2026-5172"
+      }
+    ]
+  },
+  "siemens": {
+    "aliases_seen": [
+      "Siemens",
+      "Desigo",
+      "RUGGEDCOM",
+      "SCALANCE",
+      "SIMATIC",
+      "SIMOVE",
+      "SINAMICS",
+      "SINEC",
+      "SIPLUS",
+      "SITRANS"
+    ],
+    "first_seen_advisory": "VDE-2026-049",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2025-15467"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2025-68160"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2025-69418"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2025-69419"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2025-69420"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2025-69421"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2026-22795"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2026-22796"
+      }
+    ]
+  },
+  "cloudflare": {
+    "aliases_seen": [
+      "Cloudflare"
+    ],
+    "first_seen_advisory": "VDE-2026-049",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2026-1229"
+      }
+    ]
+  },
+  "go toolchain": {
+    "aliases_seen": [
+      "Go toolchain"
+    ],
+    "first_seen_advisory": "VDE-2026-049",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2025-4674"
+      },
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2025-61732"
+      }
+    ]
+  },
+  "perl": {
+    "aliases_seen": [
+      "perl"
+    ],
+    "first_seen_advisory": "VDE-2026-049",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-049",
+        "cve": "CVE-2024-56406"
+      }
+    ]
+  },
+  "microsoft": {
+    "aliases_seen": [
+      "Microsoft",
+      "Windows"
+    ],
+    "first_seen_advisory": "VDE-2026-066",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-066",
+        "cve": "CVE-2026-25172"
+      },
+      {
+        "advisory_id": "VDE-2026-066",
+        "cve": "CVE-2026-26128"
+      },
+      {
+        "advisory_id": "VDE-2026-066",
+        "cve": "CVE-2026-23673"
+      },
+      {
+        "advisory_id": "VDE-2026-066",
+        "cve": "CVE-2026-25185"
+      },
+      {
+        "advisory_id": "VDE-2026-066",
+        "cve": "CVE-2026-25181"
+      },
+      {
+        "advisory_id": "VDE-2026-066",
+        "cve": "CVE-2026-25179"
+      },
+      {
+        "advisory_id": "VDE-2026-066",
+        "cve": "CVE-2026-25175"
+      },
+      {
+        "advisory_id": "VDE-2026-066",
+        "cve": "CVE-2026-25174"
+      },
+      {
+        "advisory_id": "VDE-2026-066",
+        "cve": "CVE-2026-26111"
+      },
+      {
+        "advisory_id": "VDE-2026-066",
+        "cve": "CVE-2026-25171"
+      }
+    ]
+  },
+  "dnsmasq": {
+    "aliases_seen": [
+      "dnsmasq"
+    ],
+    "first_seen_advisory": "VDE-2026-076",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2026-2291"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2026-4893"
+      },
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2026-5172"
+      }
+    ]
+  },
+  "opensc": {
+    "aliases_seen": [
+      "OpenSC"
+    ],
+    "first_seen_advisory": "VDE-2026-076",
+    "occurrences": [
+      {
+        "advisory_id": "VDE-2026-076",
+        "cve": "CVE-2026-40510"
+      }
+    ]
+  }
+}
