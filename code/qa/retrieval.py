@@ -78,10 +78,14 @@ def build_embeddings():
 
 
 class Retriever:
-    def __init__(self):
-        self.chunks = json.loads(CHUNKS_PATH.read_text())
+    def __init__(self, chunks: list[dict] | None = None):
+        # chunks=None loads the full store; pass a pre-filtered subset (e.g.
+        # by format) to search over just that subset with identical logic,
+        # used by format_comparison.py.
+        self.chunks = chunks if chunks is not None else json.loads(CHUNKS_PATH.read_text())
         self.by_id = {c["id"]: c for c in self.chunks}
-        self.embeddings = json.loads(EMBEDDINGS_PATH.read_text())
+        all_embeddings = json.loads(EMBEDDINGS_PATH.read_text())
+        self.embeddings = {c["id"]: all_embeddings[c["id"]] for c in self.chunks}
         self.bm25 = BM25Okapi([_tokenize(c["text"]) for c in self.chunks])
 
     def search(self, query: str, top_k: int = 5):

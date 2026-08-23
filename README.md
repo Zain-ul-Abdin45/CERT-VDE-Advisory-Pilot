@@ -33,9 +33,15 @@ against real data.
   identifiers (`FAILURE_LOG.md` entry #8) — and separately confirmed a table-formatted remediation section
   can still evade retrieval on vulnerability-phrased questions (`FAILURE_LOG.md` entry #7). Full results in
   `code/qa/results_qa.json`.
-- **Not yet built:** the CSAF/HTML ingestion parsers as a standalone reusable module (`code/ingestion/` is
-  still scaffolding — both the matching cascade and Slice B work directly against raw files without it),
-  the structured store, the format comparison (Week 4).
+- **Format comparison (Week 4):** the same 14 answerable questions run against CSAF-only vs. HTML-only
+  chunk subsets (no new ingestion — every chunk already carries a `format` tag). **CSAF-only answer
+  accuracy 0.857, HTML-only 0.000** — a root-caused, not just measured, failure: CERT@VDE's HTML page
+  gives each advisory one Remediation section competing against one section per CVE, so the fix gets
+  crowded out of retrieval for multi-CVE advisories (`FAILURE_LOG.md` entry #9).
+- **Not built, deliberately:** the CSAF/HTML ingestion parsers as a standalone reusable module
+  (`code/ingestion/` is still scaffolding — both the matching cascade and Slice B work directly against
+  raw files without it) and the structured store — neither is needed for any measured number above.
+- **All build/measurement work for the pilot is done.** What's left is the memo itself.
 
 ## Structure
 
@@ -56,6 +62,7 @@ code/
     qa_pairs.json                # 15 hand-labelled Q&A pairs (11 answerable + 4 deliberately unanswerable)
     run_eval.py                  # scores retrieval/abstention/attribution/faithfulness, writes results_qa.json
     prompt_injection_check.py    # Week 3c: one synthetic instruction-bearing chunk, forced into context
+    format_comparison.py         # Week 4: same questions against CSAF-only vs HTML-only chunk subsets
 ```
 
 Raw advisory data and NVD pulls are kept locally (not committed here, see `.gitignore`) under `data/`.

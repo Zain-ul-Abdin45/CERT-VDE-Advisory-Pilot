@@ -1,0 +1,282 @@
+[
+  {
+    "condition": "csaf",
+    "id": "q1",
+    "question": "What firmware version fixes the CODESYS vulnerability in the ifm CR3171?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.17283447236956118,
+    "answer": "The firmware version that fixes the CODESYS vulnerability in the ifm CR3171 is not explicitly stated in the provided excerpts. However, it is mentioned that CVE-2025-41659 affects devices running firmware versions prior to 3.3 and that once firmware version 3.3 is installed, the vulnerability is considered fully resolved.\n\nSource: VDE-2026-005 / document_note:description"
+  },
+  {
+    "condition": "csaf",
+    "id": "q2",
+    "question": "What is the CVSS base score of the WAGO early-boot diagnostic exposure vulnerability, CVE-2026-4769?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.21495019393324377,
+    "answer": "The CVSS base score of CVE-2026-4769 is 9.8.\n\nSource: VDE-2026-031 / vulnerability_score:cvss"
+  },
+  {
+    "condition": "csaf",
+    "id": "q3",
+    "question": "What firmware version should MBS UGW web GUI customers update to?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.2195209037556496,
+    "answer": "V6_00_07.\n\nSource: VDE-2026-039 / remediation:vendor_fix"
+  },
+  {
+    "condition": "csaf",
+    "id": "q4",
+    "question": "What versions of ibaPDA and ibaDatCoordinator fix the .NET BinaryFormatter deserialization vulnerability?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.13867051113620443,
+    "answer": "ibaPDA v8.14.0 and ibaDatCoordinator v4.0.7 fix the .NET BinaryFormatter deserialization vulnerability.\n\nSource: VDE-2026-051 / document_note:description, VDE-2026-051 / document_note:description"
+  },
+  {
+    "condition": "csaf",
+    "id": "q5",
+    "question": "What firmware version fixes the unauthenticated log download vulnerability in Phoenix Contact CHARX SEC-3xxx charging controllers?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.1205850050464925,
+    "answer": "Firmware version 1.9.0 fixes this vulnerability.\n\nSource: VDE-2026-060 / document_note:description, VDE-2026-060 / remediation:vendor_fix"
+  },
+  {
+    "condition": "csaf",
+    "id": "q6",
+    "question": "What version of the FDI Package library addresses the Endress+Hauser iDTM debug interface vulnerability?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.1274767304808695,
+    "answer": "The updated version that addresses the vulnerability is V2.02.00.\n\nSource: VDE-2026-065 / document_note:description, VDE-2026-065 / remediation:vendor_fix"
+  },
+  {
+    "condition": "csaf",
+    "id": "q7",
+    "question": "What is the METTLER TOLEDO FreshWay B/D advisory actually about?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.3572289412221821,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "csaf",
+    "id": "q8",
+    "question": "What version should Balluff BNI EGW-720-007-K095 firmware be updated to?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.17280721251031506,
+    "answer": "The fixed firmware for Balluff BNI EGW-720-007-K095 contains updates for the vulnerabilities covered by this advisory and is version 2.4.1 or later.\n\nSource: VDE-2026-049 / document_note:description, VDE-2026-049 / remediation:vendor_fix"
+  },
+  {
+    "condition": "csaf",
+    "id": "q9",
+    "question": "What version fixes the mbCONNECT24 hidden configuration access vulnerability?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.20018400520105917,
+    "answer": "2.20.2 \n\nSource: VDE-2026-068 / document_note:description, VDE-2026-068 / remediation:vendor_fix"
+  },
+  {
+    "condition": "csaf",
+    "id": "q10",
+    "question": "What version fixes the Helmholz myREX24V2 hidden configuration access vulnerability?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.22958567466382895,
+    "answer": "Version 2.20.2 fixes the Helmholz myREX24V2 hidden configuration access vulnerability.\n\nSource: VDE-2026-070 / document_note:description, VDE-2026-068 / document_note:summary, VDE-2026-070 / remediation:vendor_fix"
+  },
+  {
+    "condition": "csaf",
+    "id": "q11",
+    "question": "What firmware versions fix the ADS-TEC IRF1000 and IRF3000 vulnerabilities?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.10866025024956871,
+    "answer": "The firmware versions that fix the ADS-TEC IRF1000 and IRF3000 vulnerabilities are 2.3.0 and later.\n\nSource: VDE-2026-076 / document_note:description"
+  },
+  {
+    "condition": "csaf",
+    "id": "q16",
+    "question": "What version fixes the WAGO early-boot diagnostic exposure vulnerability?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.27312006237180764,
+    "answer": "Unfortunately, I couldn't find content relevant to that question in the collected advisories.\n\nHowever, based on similar advisory excerpts (e.g., VDE-2026-038 / document_note:description and VDE-2026-060 / document_note:description), it can be inferred that updating firmware is likely a solution."
+  },
+  {
+    "condition": "csaf",
+    "id": "q17",
+    "question": "What is the fixed version for WAGO System I/O Field devices?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.2765177919769657,
+    "answer": "The fixed versions for WAGO System I/O Field devices are:\n\n* 1.2.1.100     | I/O System Field 0765-110x/0100-0000\n* 1.2.7.100     | I/O System Field 0765-120x/0100-0000\n* 1.2.7.103     | I/O System Field 0765-150x/0100-0000\n* 1.2.1.102     | I/O System Field 0765-2101/0100-0000\n* 1.2.5.101     | I/O System Field 0765-2102/0100-0000\n* 1.2.1.100     | I/O System Field 0765-410x/0100-0000\n* 1.2.7.100     | I/O System Field 0765-420x/0100-0000\n* 1.2.7.103     | I/O System Field 0765-450x/0100-0000\n\nSource: VDE-2026-031 / document_note:description"
+  },
+  {
+    "condition": "csaf",
+    "id": "q18",
+    "question": "What is the CVSS base score of CVE-2026-4769?",
+    "abstained": false,
+    "retrieval_hit": true,
+    "answered_correctly": true,
+    "best_distance": 0.11482834536465159,
+    "answer": "The CVSS base score of CVE-2026-4769 is 9.8.\n\nSource: VDE-2026-031 / vulnerability_score:cvss"
+  },
+  {
+    "condition": "html",
+    "id": "q1",
+    "question": "What firmware version fixes the CODESYS vulnerability in the ifm CR3171?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.357894453099434,
+    "answer": "I couldn't find content relevant to that question in the collected advisories.\n\nSource: None."
+  },
+  {
+    "condition": "html",
+    "id": "q2",
+    "question": "What is the CVSS base score of the WAGO early-boot diagnostic exposure vulnerability, CVE-2026-4769?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.2162579364687408,
+    "answer": "I couldn't find content relevant to that question in the collected advisories.\n\nHowever, since the advisory ID seems incorrect (it should probably be CVE-2026-47699), let's look for a similar one. The correct advisory is VDE-2026-031 / html_section:cve-2026-47699.8:\n\nSource: VDE-2026-031 / html_section:cve-2026-47699.8"
+  },
+  {
+    "condition": "html",
+    "id": "q3",
+    "question": "What firmware version should MBS UGW web GUI customers update to?",
+    "abstained": true,
+    "retrieval_hit": false,
+    "answered_correctly": false,
+    "best_distance": 0.4699715432788304,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "html",
+    "id": "q4",
+    "question": "What versions of ibaPDA and ibaDatCoordinator fix the .NET BinaryFormatter deserialization vulnerability?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.28358473877302404,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "html",
+    "id": "q5",
+    "question": "What firmware version fixes the unauthenticated log download vulnerability in Phoenix Contact CHARX SEC-3xxx charging controllers?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.36719042674668667,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "html",
+    "id": "q6",
+    "question": "What version of the FDI Package library addresses the Endress+Hauser iDTM debug interface vulnerability?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.2421937652524777,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "html",
+    "id": "q7",
+    "question": "What is the METTLER TOLEDO FreshWay B/D advisory actually about?",
+    "abstained": true,
+    "retrieval_hit": false,
+    "answered_correctly": false,
+    "best_distance": 0.5082369081998395,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "html",
+    "id": "q8",
+    "question": "What version should Balluff BNI EGW-720-007-K095 firmware be updated to?",
+    "abstained": true,
+    "retrieval_hit": false,
+    "answered_correctly": false,
+    "best_distance": 0.43045678861009096,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "html",
+    "id": "q9",
+    "question": "What version fixes the mbCONNECT24 hidden configuration access vulnerability?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.3693506636071848,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "html",
+    "id": "q10",
+    "question": "What version fixes the Helmholz myREX24V2 hidden configuration access vulnerability?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.330082280979355,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "html",
+    "id": "q11",
+    "question": "What firmware versions fix the ADS-TEC IRF1000 and IRF3000 vulnerabilities?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.3826965306338388,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "html",
+    "id": "q16",
+    "question": "What version fixes the WAGO early-boot diagnostic exposure vulnerability?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.26146615193717804,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "html",
+    "id": "q17",
+    "question": "What is the fixed version for WAGO System I/O Field devices?",
+    "abstained": true,
+    "retrieval_hit": true,
+    "answered_correctly": false,
+    "best_distance": 0.30412857507562996,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  },
+  {
+    "condition": "html",
+    "id": "q18",
+    "question": "What is the CVSS base score of CVE-2026-4769?",
+    "abstained": true,
+    "retrieval_hit": false,
+    "answered_correctly": false,
+    "best_distance": 0.32344432250502797,
+    "answer": "I couldn't find content relevant to that question in the collected advisories."
+  }
+]

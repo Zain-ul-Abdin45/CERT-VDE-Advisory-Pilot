@@ -97,20 +97,27 @@ Companion docs, outside this repo, in `research paper/inIT/`:
 ## What's NOT done yet
 
 - **Week 2: the actual ingestion pipeline as a reusable module.** `code/ingestion/csaf/` and
-  `code/ingestion/html/` are still empty scaffolding. Both the matching cascade and Slice B's chunking
-  work directly against raw `csaf.json`/`page.html` files without it, so this is now genuinely optional
-  before the memo — a code-organization cleanup, not a blocking dependency.
+  `code/ingestion/html/` are still empty scaffolding (just `.gitkeep`). Both the matching cascade and
+  Slice B's chunking work directly against raw `csaf.json`/`page.html` files without it, so this is
+  genuinely optional before the memo — a code-organization cleanup, not a blocking dependency.
 - **The structured store** (`advisories`/`cves`/`products`/`assets`/`chunks` tables) — not started, and
   per the "lean scripts, not a full product" decision (19 August), not needed before the memo — every
-  measured number so far (matching cascade, Slice B eval) came from flat JSON + Python, no database.
-- **`code/ingestion/pdf/extract_report.py`** — this is the TÜV NORD OCR extractor from an unrelated
-  student-job task, sitting in this folder as a reference/placeholder since no real PDF advisories exist
-  to build a genuine PDF ingestion path against. Decide before the memo whether to keep it as a "here's
-  evidence I can handle messy PDF extraction generally" artifact or remove it as out of scope.
-- **Format comparison (Week 4)** — run the same questions against CSAF vs. HTML-derived chunks and compare
-  accuracy. Slice B's chunk store already tags every chunk with `format`, so this is a filtering exercise
-  over the existing pipeline, not new infrastructure.
-- **The memo itself.** Target: early September 2026.
+  measured number so far (matching cascade, Slice B eval, format comparison) came from flat JSON +
+  Python, no database.
+- **The memo itself.** In progress, being drafted separately (outside this repo). Target: early
+  September 2026.
+
+**Resolved, previously listed here as open:**
+- `code/ingestion/pdf/extract_report.py` — checked directly: it was never actually placed in
+  `code/ingestion/pdf/` (just a `.gitkeep`), so there's nothing to decide keep-vs-cut on. The earlier
+  note describing it as sitting there was stale.
+- **Format comparison (Week 4) — done, 23 August.** `code/qa/format_comparison.py` filters the existing
+  chunk store to CSAF-only vs. HTML-only and reruns the same 14 answerable questions through each.
+  **Result: CSAF-only answer accuracy 0.857, HTML-only 0.000** — every HTML-only question was refused,
+  even though the right advisory was found in the top-5 for 10 of 14 (`FAILURE_LOG.md` #9). Root cause
+  identified, not just measured: CERT@VDE's HTML structure gives each advisory one Remediation section
+  competing against one section per CVE (10-20+ for a multi-CVE advisory), so the fix gets crowded out
+  of the candidate pool; CSAF ties remediation text to each vulnerability as a first-class field instead.
 
 ---
 
@@ -139,8 +146,8 @@ Companion docs, outside this repo, in `research paper/inIT/`:
 1. `cd code/matching && python3 run_matching.py` reproduces the matching headline numbers in ~2 seconds.
 2. `ollama serve` (if not already running), then `cd code/qa && python3 run_eval.py` reproduces the
    Slice B numbers in under a minute — `embeddings.json` is already built, no re-embedding needed unless
-   `chunks.json` changed.
-3. Read `FAILURE_LOG.md` top to bottom — six entries now, each self-contained, each with "what it would
+   `chunks.json` changed. `python3 format_comparison.py` reproduces the CSAF-vs-HTML numbers.
+3. Read `FAILURE_LOG.md` top to bottom — nine entries now, each self-contained, each with "what it would
    take to fix" already written out.
-4. What's left before the memo: format comparison (CSAF vs. HTML accuracy, filtering the existing chunk
-   store — no new build), then draft and send. Target: early September.
+4. All build/measurement work for the pilot is done. What's left: draft and send the memo. Target: early
+   September.
