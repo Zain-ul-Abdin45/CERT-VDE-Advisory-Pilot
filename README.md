@@ -1,12 +1,12 @@
-# SRAG Pilot
+# CERT@VDE Advisory Pilot
 
-A small, honest pilot on public security-advisory data (CERT@VDE advisories + NVD CVE records), built to
-learn the domain before proposing a Research Project at TH OWL / inIT on SRAG (Security Retrieval
-Augmented Generation for industrial automation advisories).
+Independent pilot on public data (CERT@VDE advisories + NVD CVE records). Not affiliated with the SRAG
+project or its codebase; built to learn the domain before proposing a Research Project at TH OWL / inIT
+on SRAG (Security Retrieval Augmented Generation for industrial automation advisories).
 
-This is not SRAG. It is a bounded experiment that documents precisely where a RAG + entity-resolution
-pipeline breaks on real advisory data, weighted toward the project's own stated pain point:
-product/vulnerability matching under inconsistent naming.
+This is a bounded experiment that documents precisely where a RAG + entity-resolution pipeline breaks
+on real advisory data, weighted toward the project's own stated pain point: product/vulnerability
+matching under inconsistent naming.
 
 ## Status (updated 23 August 2026 — see `STATUS.md` for full continuity notes)
 
