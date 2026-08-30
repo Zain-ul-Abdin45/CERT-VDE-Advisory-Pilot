@@ -1,7 +1,7 @@
 # Status — continuity notes
 
 *Last updated 23 August 2026. Read this first if picking the pilot back up after a gap — it's written
-so the next session doesn't need to re-derive anything from the conversation history.*
+so the next session doesn't need to re-derive anything from the scratch.*
 
 Companion docs, outside this repo, in `research paper/inIT/`:
 - `SRAG Kickoff Plan (4 Weeks).md` — the week-by-week plan this repo is executing.
