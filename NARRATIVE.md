@@ -2,7 +2,7 @@
 
 *A narrative account, not a status table — what the goal was, what got looked at, what turned up, and
 where each finding changed the plan. Written 19 August 2026, covering the work from Week 0 reading
-through the first real matching numbers. Companion to `STATUS.md` (current state) and `FAILURE_LOG.md`
+through the first real matching numbers. Companion to [STATUS.md](STATUS.md) (current state) and [FAILURE_LOG.md](FAILURE_LOG.md)
 (the findings themselves, in isolation).*
 
 ---

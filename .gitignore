@@ -4,5 +4,7 @@ code/qa/embeddings.json
 __pycache__/
 *.pyc
 .venv/
+.srag_pilot/
 .env
+CERT@VDE_Advisory_Pilot.pdf
 .DS_Store
