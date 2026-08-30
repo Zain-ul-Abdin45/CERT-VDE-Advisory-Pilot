@@ -1,6 +1,6 @@
 # Failure Log
 
-Running log per `SRAG Preparation Roadmap.md` Phase 6: what happened, why, and what it would take to fix. Raw material for the research project proposal — three or four good failure modes give a defensible, bounded topic.
+Running log per `SRAG Preparation Roadmap.md` Phase 6: what happened, why, and what it would take to fix. Raw material for the research project proposal.
 
 ---
 
